@@ -51,3 +51,7 @@ body {
 .group-hover\:animate-shine:hover {
   animation: shine 0.5s; /* Durasi kilatan */
 }
+
+html {
+  scroll-behavior: smooth;
+}
