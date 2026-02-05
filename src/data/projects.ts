@@ -122,7 +122,7 @@ export const projectsData = [
     ],
     github: "https://github.com/4tmaa/SIPILAH-APP",
     demo: "#",
-    image: "/projects/image2.jpg",
+    image: "/projects/image6.png",
     bg: "from-orange-900/40 to-red-900/40",
     logo: "/Sipilah2.png"
   },
