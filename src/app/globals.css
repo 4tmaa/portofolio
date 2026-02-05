@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mendaftarkan variabel font agar bisa dipanggil di class Tailwind */
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+  --font-display: var(--font-space);
+}
+
+:root {
+  --background: #030303;
+  --foreground: #ffffff;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Utilitas tambahan untuk mask gradient (efek pudar di carousel) */
+.mask-gradient {
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+/* Animasi Kilau Teks (Kiri ke Kanan) */
+@keyframes shimmer {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+/* Animasi Kilatan Tombol (Cepat) */
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-12deg);
+  }
+}
+
+.group-hover\:animate-shine:hover {
+  animation: shine 0.5s; /* Durasi kilatan */
+}
