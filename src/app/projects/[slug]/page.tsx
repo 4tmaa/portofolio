@@ -63,34 +63,18 @@ export default function ProjectDetail() {
             <div className="lg:col-span-2 space-y-12">
                 
                 <div className="w-full aspect-video bg-[#0a0a0a] rounded-3xl border border-white/10 relative overflow-hidden group shadow-2xl">
-                
-                    {/* LOGIKA: Cek apakah ada Video? */}
-                    {project.video ? (
-                        <video 
-                            controls 
-                            autoPlay 
-                            muted 
-                            loop 
-                            className="w-full h-full object-cover"
-                        >
-                            <source src={project.video} type="video/mp4" />
-                            Browser Anda tidak mendukung tag video.
-                        </video>
-                    ) : (
-                        /* JIKA TIDAK ADA VIDEO, TAMPILKAN GAMBAR */
-                        <div className="relative w-full h-full">
-                            <Image 
-                                src={project.image} 
-                                alt={project.title}
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                priority
-                            />
-                            
-                            {/* Overlay Gradient Halus biar teks diatasnya terbaca (opsional) */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
-                        </div>
-                    )}
+                    <div className="relative w-full h-full">
+                        <Image 
+                            src={project.image} 
+                            alt={project.title}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            priority
+                        />
+                        
+                        {/* Overlay Gradient Halus biar teks diatasnya terbaca (opsional) */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
+                    </div>
                 </div>
 
                 {/* Problem & Solution (Case Study Format) */}
