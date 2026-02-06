@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next"; // 1. Tambahkan import Viewport
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google"; 
 import "./globals.css";
 
@@ -23,6 +23,20 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Diky Mulya Atmaja | IoT & Mobile Developer",
   description: "Portofolio Profesional Diky Mulya Atmaja - Universitas Amikom Yogyakarta",
+};
+
+// === KONFIGURASI VIEWPORT (AGAR TAMPILAN DESKTOP DI HP) ===
+export const viewport: Viewport = {
+  // Memaksa browser merender lebar 1280px (Ukuran Laptop Standar)
+  width: 1280, 
+  
+  // Skala awal 0.3 (Zoom out) agar seluruh lebar 1280px muat di layar HP yang sempit
+  // Anda bisa ubah angka ini (misal 0.25 atau 0.4) sesuai selera
+  initialScale: 0.3, 
+  
+  // Mengizinkan user untuk zoom in (cubit layar) jika teks terlalu kecil
+  userScalable: true,
+  maximumScale: 5,
 };
 
 export default function RootLayout({
