@@ -120,7 +120,7 @@ export const projectsData = [
       "Persistent Configuration (NVS Auto-reconnect)",
       "Robust Input Handling (Software Debouncing)"
     ],
-    github: "https://github.com/4tmaa/SIPILAH-APP",
+    github: "https://github.com/4tmaa/SiPiLah",
     demo: "#",
     image: "/projects/image6.png",
     bg: "from-orange-900/40 to-red-900/40",
